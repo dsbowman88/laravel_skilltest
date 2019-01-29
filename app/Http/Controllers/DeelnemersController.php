@@ -40,7 +40,7 @@ class DeelnemersController extends Controller
             'email' => ['required', 'min:5'],
             'route' => 'required'
             ]));
-        return redirect('deelnemers.index');
+        return redirect('/deelnemers');
     }
 
     /**
@@ -51,7 +51,7 @@ class DeelnemersController extends Controller
      */
     public function show(Deelnemers $deelnemers)
     {
-        //
+        return view('deelnemers.show', compact('deelnemers'));
     }
 
     /**

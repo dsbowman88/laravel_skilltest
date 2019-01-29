@@ -1,3 +1,5 @@
 <?php
 
-Deelnemers::all()
+use \App\Deelnemers;
+
+echo Deelnemers::all();
