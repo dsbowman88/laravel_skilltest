@@ -1,0 +1,3 @@
+<?php
+
+Deelnemers::all()

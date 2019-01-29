@@ -32,6 +32,6 @@ class Groepen extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('groepen');
     }
 }

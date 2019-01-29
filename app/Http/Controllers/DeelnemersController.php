@@ -14,7 +14,7 @@ class DeelnemersController extends Controller
      */
     public function index()
     {
-        //
+        return view('deelnemers.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class DeelnemersController extends Controller
      */
     public function create()
     {
-        //
+        return view('deelnemers.create');
     }
 
     /**
@@ -35,7 +35,12 @@ class DeelnemersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Deelnemers::create(request()->validate([
+            'naam' => ['required', 'min:3', 'max:255'],
+            'email' => ['required', 'min:5'],
+            'route' => 'required'
+            ]));
+        return redirect('deelnemers.index');
     }
 
     /**
